@@ -1,0 +1,29 @@
+@import './fonts/lato';
+@import './fonts/roboto-mono';
+
+// Global
+@import './global/_variables';
+@import './global/util';
+
+// Partials
+@import './partials/header';
+@import './partials/footer';
+
+// Pages
+@import './pages/index';
+
+body {
+    margin: 0;
+    font-family: $lato;
+    color: #333;
+}
+
+a {
+    color: #00b7ff;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}

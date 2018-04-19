@@ -1,15 +1,18 @@
 exports.up = function(knex, Promise) {
     return Promise.all([
-        knex.schema.createTable('users', function(table) {
-            table.increments()
-            table.string('username', 20).unique()
-            table.string('email', 100).unique()
-            table.binary('password', 60)
-            table.timestamps()
+        knex.schema.createTable('Job_Details', function(table) {
+            table.increments();
+            table.string('Company', 30).notNull();
+            table.string('Position', 45).notNull();
+            table.string('City', 45).notNull();
+            table.string('State', 45).notNull();
+            table.date('Date').notNull();
+            table.enum('Reply',['Yes','No']).notNull();
+            table.enum('Status',['Accepted','Rejected','NA']).notNull();
         })
     ])
 }
 
 exports.down = function(knex, Promise) {
-    return Promise.all([knex.schema.dropTable('users')])
+    return Promise.all([knex.schema.dropTable('Job_Details')])
 }

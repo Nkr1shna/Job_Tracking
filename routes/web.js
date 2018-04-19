@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
 
 router.post('/apply', (req, res) => {
     Job_Details.create({
-        Company: req.body.company, Position : req.body.position, Date : new Date(), Reply: 'No', Status: 'NA'
+        Company: req.body.company, Position : req.body.position, City: req.body.city, State: req.body.state, Date : new Date(), Reply: 'No', Status: 'NA'
     }).then(details => { res.render('index', { message : "Recorded",title: 'New Application Details' }) })
         .catch(error => { console.log("Failed " + error), res.render('index', { title: "New Application Details'", message: "Database Error" }) })
 })

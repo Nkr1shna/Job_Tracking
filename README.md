@@ -1,4 +1,4 @@
-#Steps to run this app
+# Steps To Run This App
 1. Make sure you have mysql server installed or install it and set it up by
         $ sudo apt install mysql-server
 2. Git clone this repo to a convinient directory by

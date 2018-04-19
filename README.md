@@ -33,4 +33,4 @@ $ voyager start
 $ npx webpack
 ```
 10. The website will open in your default browser
-11. Click on Apply in the top bar and enter your application details.
+11. Enjoy the Website!

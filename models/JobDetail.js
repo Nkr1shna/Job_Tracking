@@ -1,6 +1,6 @@
 const bookshelf = require('../config/bookshelf')
 
-const Job_Details = bookshelf.Model.extend({
+const Job_Detail = bookshelf.Model.extend({
     tableName: 'Job_Details'
 },
 {
@@ -9,7 +9,7 @@ const Job_Details = bookshelf.Model.extend({
     },
     update: function(data,new_data){
         return this.forge().query({where:data}).save(new_data,{method: 'update'})
-    }
+    },
 })
 
-module.exports = Job_Details
+module.exports = Job_Detail

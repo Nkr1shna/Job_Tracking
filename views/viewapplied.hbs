@@ -1,0 +1,41 @@
+<br>
+{{#if message}}
+<div class="alert alert-success">
+    <strong>{{message}}!</strong>
+</div>
+{{/if}} {{#if error}}
+<div class="alert alert-danger">
+    <strong>{{error}}!</strong>
+</div>
+{{/if}}
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Company</th>
+            <th scope="col">Position</th>
+            <th scope="col">City</th>
+            <th scope="col">State</th>
+            <th scope="col">Date</th>
+            <th scope="col">Reply</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each jobs}}
+        <tr>
+            <th scope="row">
+                <a href='update?company={{this.Company}}&position={{this.Position}}'>{{inc @index}}</a>
+            </th>
+            <td>{{this.Company}}</td>
+            <td>{{this.Position}}</td>
+            <td>{{this.City}}</td>
+            <td>{{this.State}}</td>
+            <td>{{this.Date}}</td>
+            <td>{{this.Reply}}</td>
+            <td>{{this.Status}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

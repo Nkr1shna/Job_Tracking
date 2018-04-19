@@ -25,6 +25,9 @@ const hbs = exphbs.create({
         },
         toJSON(object) {
             return JSON.stringify(object)
+        },
+        inc(value, options) {
+            return parseInt(value) + 1;
         }
     }
 })
@@ -34,7 +37,7 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', '.hbs')
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'img/jobs.png')));
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))

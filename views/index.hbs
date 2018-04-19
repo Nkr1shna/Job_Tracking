@@ -1,9 +1,26 @@
 <div class="container index-container text-center">
-    <img class="body-logo" src="img/cc-voyager.svg" alt="Chris Courses' Voyager Logo">
-
     <nav class="index-nav">
-        <a href="https://github.com/chriscourses/voyager" target="_blank">Git Repo</a>
-        <a href="http://voyager.chriscourses.com/" target="_blank">Docs</a>
-        <a href="http://chriscourses.com/" target="_blank">Free Learning Videos</a>
     </nav>
+    {{message}}
+    <div class="container">
+        <form method="POST" action="apply">
+            <div class="form-group row">
+                <label for="Company" class="col-sm-2 col-form-label">Company</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="company" placeholder="Company name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="Position" class="col-sm-2 col-form-label">Position</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="position" placeholder="Position">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="offset-sm-1 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Applied</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>

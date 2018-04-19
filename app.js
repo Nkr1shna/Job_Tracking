@@ -5,6 +5,7 @@ const logger = require('morgan')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const config = require('./config/app')
+const dateformat = require('dateformat');
 
 const exphbs = require('express-handlebars')
 
@@ -26,8 +27,11 @@ const hbs = exphbs.create({
         toJSON(object) {
             return JSON.stringify(object)
         },
-        inc(value, options) {
+        inc(value) {
             return parseInt(value) + 1;
+        },
+        dateFormat(date){
+            return dateformat(date,"mmmm dS, yyyy")
         }
     }
 })
@@ -37,7 +41,7 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', '.hbs')
 
 // uncomment after placing your favicon in /public
-app.use(favicon(path.join(__dirname, 'public', 'img/jobs.png')));
+app.use(favicon(path.join(__dirname, 'public', 'img/programmer.svg')));
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))

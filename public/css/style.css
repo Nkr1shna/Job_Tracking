@@ -328,7 +328,8 @@
 header {
   padding: 12px;
   border-bottom: 1px solid #eee;
-  background: white; }
+  background: #292f36; 
+  }
 
 .header-container {
   display: -ms-flexbox;
@@ -345,11 +346,15 @@ header {
       width: 150px; } }
 
 .header-nav a {
+  color: #e2c044;
   display: inline-block;
   margin: 0 15px;
   font-family: "Roboto Mono", monospace; }
   .header-nav a:nth-last-child(1) {
     margin-right: 0; }
+  .header-nav a:hover{
+    color: #e2c044;
+  }
 
 .index-container {
   height: calc(100vh - 75px);
@@ -373,15 +378,23 @@ header {
   display: inline-block;
   margin: 0 3px; }
 
+.links {
+  color: #e2c044;
+}
+.links:hover{
+  color: #e2c044
+}
+
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
   color: #333; }
 
-a {
-  color: #00b7ff;
-  text-decoration: none; }
-
 .container {
   max-width: 1170px;
   margin: 0 auto; }
+
+.middle-text{
+  color: #e2c044;
+  font-family: "Roboto Mono", monospace;
+}

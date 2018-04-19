@@ -1,11 +1,13 @@
-<header>
+<header class="fixed-top">
     <div class="container header-container">
         <a href="/">
-            <img class="header-logo" src="img/jobs.png" alt="Jobs" style="width:50px;height:50px;">
+            <img class="header-logo" src="img/programmer.svg" alt="Jobs" style="width:50px;height:50px;">
         </a>
-        <div class="alert alert-info" role="alert">
+        {{#if jobs}}
+        <div class="middle-text">
             You have applied for {{jobs.length}} Jobs
         </div>
+        {{/if}}
         <nav class="header-nav">
             <a href="/apply">Apply</a>
             <a href="/update">Update</a>

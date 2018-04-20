@@ -45,6 +45,9 @@ router.post('/update', (req, res) => {
         .catch(error => { console.log("Failed " + error), viewAll(res, null, "Error") })
 })
 
+router.get('/about', (req, res) => {
+    res.render('about', {title: 'Application Details' })
+})
 
 
 
